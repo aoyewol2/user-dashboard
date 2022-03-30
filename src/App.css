@@ -1,38 +1,116 @@
+body {
+  padding: 60px;
+  font-family: 'DM Sans', sans-serif;
+  color: #1a1a1a;
+  background: #d3ebbc;
+  background: linear-gradient(45deg, rgba(211,235,188,1) 0%, #bcebdf 100%);
+}
+
 .App {
-  text-align: center;
-}
+  background-color: rgba(255, 255, 255, 0.219);
+  padding: 30px;
+  border: 1px solid #ade0d388;
+  border-radius: 15px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+
+  max-width: 1000px;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-weight: lighter;
+  color: #63a393;
+}
+
+button {
+  font-size: 14px;
+  padding: 10px 25px 10px 25px;
+  margin: 20px 20px 20px 0px;
+  border-radius: 12px;
+  border: 1px solid #559e8c;
+  color: white;
+  background-color: #51aa94;
+  cursor: pointer;
+}
+
+button.var-2 {
+  background-color: #51aa944d;
+  border: 2px solid #559e8c;
+  color: #348d77;
+}
+
+button:hover {
+  background-color: #4aa08a; 
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.floaters {
+  float: right;
+  color: #559e8c;
+  padding: 5px
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.floaters span {
+  padding: 10px;
+  cursor: pointer;
+}
+
+span.footer {
+  color: #559e8c;
+  display: block;
+  text-align: center;
+  opacity: 65%;
+  padding-top: 40px;
+  margin: auto;
+}
+
+::selection {
+  background-color: #1a1a1a6b;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px; height: 10px; transition-duration: 0.2s;
+}
+
+::-webkit-scrollbar-track {
+background: #ffffff1f;
+}
+
+::-webkit-scrollbar-thumb {
+background: #51aa94; border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #348d77; 
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: px;
+}
+
+@media screen and (max-width: 920px) {
+  .parent {
+      display: inline;
   }
-  to {
-    transform: rotate(360deg);
+
+  .div2 {
+    padding-top:20px;
   }
 }
+  
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
